@@ -1,0 +1,30 @@
+  <!--login start-->
+
+                <div class="logoButtons">
+
+                      <?php if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
+
+                       <a class="btn btn-primary btnLog" href="<?php echo $this->getUrl('customer/account/logout') ?>">
+
+                      <?php echo $this->__('Log In') ?>
+
+                      </a>
+
+                      <?php else: ?>
+
+
+                      <a class="btn btn-primary btnLog" href="<?php echo $this->getUrl('customer/account/logout') ?>"><?php echo $this->__('Log Out') ?></a>
+
+                     <?php endif ?>
+
+                      <?php if (Mage::getSingleton('customer/session')->isLoggedIn()==0): ?>
+
+                      <a class="btn" target="_self" href="<?php echo $this->getUrl('customer/account/create') ?>">Sign up</a>
+
+                      <?php endif ?>
+
+                    </div>
+
+              <!--login end-->
+
+              <!--login end-->
